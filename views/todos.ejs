@@ -8,23 +8,58 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Todos</h1>
-    <ul>
+    <h1>5-3-1</h1>
+   <ul>
     <% todos.forEach( el => { %>
+            <li class='todoItem' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo[0] %></span>
+                <span class='del'> Delete </span>
+            </li>
+     
+    
+        
         <li class='todoItem' data-id='<%=el._id%>'>
-            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo[1] %></span>
             <span class='del'> Delete </span>
-        </li>
-    <% }) %>    
+        </li> <li class='todoItem' data-id='<%=el._id%>'>
+            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo[2] %></span>
+            <span class='del'> Delete </span>
+        </li> <li class='todoItem' data-id='<%=el._id%>'>
+            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo[3] %></span>
+            <span class='del'> Delete </span>
+        </li> <li class='todoItem' data-id='<%=el._id%>'>
+            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo[4] %></span>
+            <span class='del'> Delete </span>
+        </li> 
+        <% }) %> 
+       
     </ul>
 
     <h2>Things left to do: <%= left %></h2>
-
+    <p>
     <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-        <input type="submit">
+         <input type="text" placeholder="5-1" name='todoItem'>
+    </p>
+    <p>
+    <form action="/todos/createTodoTwo" method='POST'>
+        <input type="text" placeholder="5-2" name='todoItem'>
+    </p>
+        <p>
+         <input action="/todos/createTodoThree" type="text" name="todoItem" placeholder ="5-3">
+          </p>
+          <p>
+            <input action="/todos/createTodoFour" type="text" name="todoItem" placeholder ="5-4">
+             </p>
+          <p>
+            <input action="/todos/createTodoFive" type="text" name="todoItem" placeholder ="5-5">
+             </p>
+            
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
     </form>
-
+    
     <script src="js/main.js"></script>
 </body>
 </html>

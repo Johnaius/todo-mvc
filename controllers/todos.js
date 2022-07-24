@@ -19,6 +19,42 @@ module.exports = {
             console.log(err)
         }
     },
+    createTodoTwo: async (req, res)=>{
+        try{
+            await Todo.create({todo: req.body.todoItem, completed: false})
+            console.log(req.body.todoItem)
+            console.log('Todo has been added!')
+            res.redirect('/todos')
+            
+        }catch(err){
+            console.log(err)
+        }
+    },
+    createTodoThree: async (req, res)=>{
+        try{
+            await Todo.create({todo: req.body.todoItem, completed: false})
+            console.log('Todo has been added!')
+            res.redirect('/todos')
+        }catch(err){
+            console.log(err)
+        }
+    },createTodoFour: async (req, res)=>{
+        try{
+            await Todo.create({todo: req.body.todoItem, completed: false})
+            console.log('Todo has been added!')
+            res.redirect('/todos')
+        }catch(err){
+            console.log(err)
+        }
+    },createTodoFive: async (req, res)=>{
+        try{
+            await Todo.create({todo: req.body.todoItem, completed: false})
+            console.log('Todo has been added!')
+            res.redirect('/todos')
+        }catch(err){
+            console.log(err)
+        }
+    },
     markComplete: async (req, res)=>{
         try{
             await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{

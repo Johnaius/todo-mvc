@@ -5,6 +5,10 @@ const todosController = require('../controllers/todos')
 router.get('/', todosController.getTodos)
 
 router.post('/createTodo', todosController.createTodo)
+router.post('/createTodoTwo', todosController.createTodo)
+router.post('/createTodoThree', todosController.createTodo)
+router.post('/createTodoFour', todosController.createTodo)
+router.post('/createTodoFive', todosController.createTodo)
 
 router.put('/markComplete', todosController.markComplete)
 
