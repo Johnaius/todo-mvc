@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const TodoSchema = new mongoose.Schema({
   todo: {
-    type: String,
+    type: Array,
     required: true,
   },
   completed: {

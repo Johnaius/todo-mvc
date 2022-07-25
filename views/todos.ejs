@@ -12,25 +12,9 @@
    <ul>
     <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo[0] %></span>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
                 <span class='del'> Delete </span>
             </li>
-     
-    
-        
-        <li class='todoItem' data-id='<%=el._id%>'>
-            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo[1] %></span>
-            <span class='del'> Delete </span>
-        </li> <li class='todoItem' data-id='<%=el._id%>'>
-            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo[2] %></span>
-            <span class='del'> Delete </span>
-        </li> <li class='todoItem' data-id='<%=el._id%>'>
-            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo[3] %></span>
-            <span class='del'> Delete </span>
-        </li> <li class='todoItem' data-id='<%=el._id%>'>
-            <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo[4] %></span>
-            <span class='del'> Delete </span>
-        </li> 
         <% }) %> 
        
     </ul>
@@ -41,17 +25,17 @@
          <input type="text" placeholder="5-1" name='todoItem'>
     </p>
     <p>
-    <form action="/todos/createTodoTwo" method='POST'>
+    <form action="/todos/createTodo" method='POST'>
         <input type="text" placeholder="5-2" name='todoItem'>
     </p>
         <p>
-         <input action="/todos/createTodoThree" type="text" name="todoItem" placeholder ="5-3">
+         <input action="/todos/createTodo" type="text" name="todoItem" placeholder ="5-3">
           </p>
           <p>
-            <input action="/todos/createTodoFour" type="text" name="todoItem" placeholder ="5-4">
+            <input action="/todos/createTodo" type="text" name="todoItem" placeholder ="5-4">
              </p>
           <p>
-            <input action="/todos/createTodoFive" type="text" name="todoItem" placeholder ="5-5">
+            <input action="/todos/createTodo" type="text" name="todoItem" placeholder ="5-5">
              </p>
             
           <p>
